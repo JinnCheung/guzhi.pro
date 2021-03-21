@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>估值PRO</title>
+    <link>https://example.com/</link>
+    <description>Recent content on 估值PRO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>静态网站生成器Hugo</title>
+      <link>https://example.com/post/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是&lt;a href=&#34;guzhi.pro&#34;&gt;估值PRO&lt;/a&gt;的第1篇文章，也是&lt;a href=&#34;https://example.com/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/&#34;&gt;零成本快速建站&lt;/a&gt;系列的第1篇文章。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2021-03-15&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;是一款跨平台静态网站生成器，采用&lt;a href=&#34;https://golang.org/&#34;&gt;golang&lt;/a&gt;编写，优点主要有：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;运维成本低&lt;/strong&gt;：与WordPress、Drupal等传统博客程序相比，Hugo不需要管理数据库和后台程序，几乎不占用计算资源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;开发效率高&lt;/strong&gt;：与hexo、jekyll等静态网站生成器相比，Hugo页面渲染速度更快，支持本地自动刷新，没有复杂的第三方依赖。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;学习成本低&lt;/strong&gt;：Hugo已经提供300+款主题模板，支持windows, macOS, linux跨平台，配置较为简单。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Basic HTML Elements</title>
+      <link>https://example.com/post/basic-elements/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/basic-elements/</guid>
+      <description>&lt;p&gt;The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MathJax</title>
+      <link>https://example.com/post/mathjax/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/mathjax/</guid>
+      <description>&lt;p&gt;MathJax JavaScript library allows you to include mathematics in your web pages for viewing in any modern browser.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Translation Support</title>
+      <link>https://example.com/post/translation/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/translation/</guid>
+      <description>&lt;p&gt;With Hugo i18n possibilities, you can easily have a website in your language. This Hugo theme is ready to be translated into other languages. You can create a special file that contains translated text to show the visitor instead of English.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Featured Images</title>
+      <link>https://example.com/post/featured-images/</link>
+      <pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/featured-images/</guid>
+      <description>&lt;p&gt;Featured image is the image that appears on summaries at the list pages and the top of content pages. Every content page
+in this theme can have a featured image.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About Hugo</title>
+      <link>https://example.com/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/about/</guid>
+      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hugo makes use of a variety of open source projects including:
+ https://github.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Syntax Highlighting</title>
+      <link>https://example.com/post/syntax-highlighting/</link>
+      <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/syntax-highlighting/</guid>
+      <description>&lt;p&gt;You can have code snippets highlighted so that they are easier to read on your site using Chroma, Hugo&amp;rsquo;s default syntax highlighter. It is built in Go lang and is really, really fast – and for the most important parts compatible with Pygments. Chroma takes source code and other structured text and converts it into syntax highlighted HTML, ANSI-coloured text, etc.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://example.com/post/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://example.com/post/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/goisforlovers/</guid>
+      <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic. In our experience that it is just the right amount of
+logic to be able to create a good static website. If you have used other
+template systems from different languages or frameworks you will find a lot of
+similarities in Go templates.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://example.com/post/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>电子出版技术 on 估值PRO</title>
+    <link>https://example.com/categories/%E7%94%B5%E5%AD%90%E5%87%BA%E7%89%88%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 电子出版技术 on 估值PRO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/%E7%94%B5%E5%AD%90%E5%87%BA%E7%89%88%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>静态网站生成器Hugo</title>
+      <link>https://example.com/post/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是&lt;a href=&#34;guzhi.pro&#34;&gt;估值PRO&lt;/a&gt;的第1篇文章，也是&lt;a href=&#34;https://example.com/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/&#34;&gt;零成本快速建站&lt;/a&gt;系列的第1篇文章。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2021-03-15&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;是一款跨平台静态网站生成器，采用&lt;a href=&#34;https://golang.org/&#34;&gt;golang&lt;/a&gt;编写，优点主要有：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;运维成本低&lt;/strong&gt;：与WordPress、Drupal等传统博客程序相比，Hugo不需要管理数据库和后台程序，几乎不占用计算资源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;开发效率高&lt;/strong&gt;：与hexo、jekyll等静态网站生成器相比，Hugo页面渲染速度更快，支持本地自动刷新，没有复杂的第三方依赖。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;学习成本低&lt;/strong&gt;：Hugo已经提供300+款主题模板，支持windows, macOS, linux跨平台，配置较为简单。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
