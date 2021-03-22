@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1b1b1b">
+	<title>通过CDN部署静态网站 | 估值PRO</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="stylesheet" href="/css/themes/dark-green.css">
+	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
+		
+</head>
+<body class="body kind-page">
+	<header class="header">
+	<a class="logo" href="/">估值PRO</a>
+	
+<nav class="main-nav main-nav--right" role="navigation">
+	<button id="toggle" class="main-nav__btn" aria-label="Menu toggle" aria-expanded="false" tabindex="0">
+		<div class="main-nav__btn-box" tabindex="-1">
+			<svg class="main-nav__icon icon-menu" width="18" height="18" viewBox="0 0 18 18">
+				<path class="icon-menu__burger" d="M18 0v3.6H0V0h18zM0 10.8h18V7.2H0v3.6zM0 18h18v-3.6H0V18z"/>
+				<path class="icon-menu__x" d="M11.55 9L18 15.45 15.45 18 9 11.55 2.55 18 0 15.45 6.45 9 0 2.55 2.55 0 9 6.45 15.45 0 18 2.55 11.55 9z"/>
+			</svg>
+		</div>
+	</button>
+	<ul id="menu" class="main-nav__list">
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/about/">
+					
+					<span class="main-nav__text">前言</span>
+					
+				</a>
+			</li>
+	</ul>
+</nav>
+</header>
+	<div class="primary">
+	
+	<main class="main">
+		
+<nav class="breadcrumb block" aria-label="breadcrumb">
+	<ol class="breadcrumb__list">
+		
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/">估值PRO</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/post/">文章列表</a>
+		</li>
+		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">通过CDN部署静态网站</li>
+	</ol>
+</nav>
+		<div class="single block">
+			<article class="entry">
+				<h1 class="entry__title">通过CDN部署静态网站</h1>
+<details class="entry__toc toc" >
+	<summary class="toc__title">快速导航</summary>
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#一把网站提交到github">一、把网站提交到Github</a></li>
+    <li><a href="#二注册netlify并链接到github的repository">二、注册Netlify并链接到GitHub的Repository</a></li>
+    <li><a href="#三设置图片cdn">三、设置图片CDN</a></li>
+  </ul>
+</nav>
+</details>
+				<div class="entry__content"><blockquote>
+<p>这是<a href="guzhi.pro">估值PRO</a>的第2篇文章，也是<a href="/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/">零成本快速建站</a>系列的第2篇文章。</p>
+<p><em>2021-03-16</em></p>
+</blockquote>
+<p>用<a href="../%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8HUGO/">Hugo做完网站</a>后，怎么发布到互联网上？</p>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>成本</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>虚拟空间/VPS主机</td>
+<td>高</td>
+<td>要备案</td>
+</tr>
+<tr>
+<td>国内对象储存服务+CDN（阿里、腾讯）</td>
+<td>较便宜</td>
+<td>要备案</td>
+</tr>
+<tr>
+<td>国内静态网站服务商（Coding）</td>
+<td>免费</td>
+<td>有广告</td>
+</tr>
+<tr>
+<td>国外静态网站服务商（Github/Gitlab）</td>
+<td>免费</td>
+<td>百度不收录</td>
+</tr>
+<tr>
+<td>国外静态网站CDN（Netlify/Vercel）</td>
+<td>免费</td>
+<td>限每月100G流量</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>如果有已备案域名，可以考虑国内对象储存，不然还是Netlify吧！</p>
+</blockquote>
+<h2 id="一把网站提交到github">一、把网站提交到Github</h2>
+<p>注册Github账户和在GitHub创建仓库（Repository）不再赘述。</p>
+<p>在终端中，在网站文件夹下按以下命令操作:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 如果未初始化过，初始化GIT仓库 &amp;&amp; 添加所有文件监视 &amp;&amp; 提交第一次修改</span>
+git init <span style="color:#f92672">&amp;&amp;</span> git add . <span style="color:#f92672">&amp;&amp;</span> git commit -m <span style="color:#e6db74">&#34;1st&#34;</span>
+<span style="color:#75715e"># 设置主分支为main（2021年后GITHUB政治要求）</span>
+git branch -M main
+<span style="color:#75715e"># 新增远程分支</span>
+git remote add origin https://github.com/<span style="color:#f92672">[</span>你的账号<span style="color:#f92672">]</span>/<span style="color:#f92672">[</span>你的repository<span style="color:#f92672">]</span>.git
+<span style="color:#75715e"># 如果远程仓库原来不为空仓库，拉取origin远程分支至本地main，合并不相关的历史分支。如果为空，忽略</span>
+git pull origin main --allow-unrelated-histories <span style="color:#f92672">&amp;&amp;</span> git commit -m <span style="color:#e6db74">&#34;merge remote&#34;</span>  
+<span style="color:#75715e"># 推送main分支到远程分支origin</span>
+git push -u origin main
+</code></pre></div><p>不喜欢提交时输入账号密码的，可以改SSH方式提交（需要创建密钥和设置SSH，密钥和SSH详见<a href="../Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/">Linux服务器管理基础</a>）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 在本机生成密钥对，然后在GitHub中添加公钥</span>
+https://github.com/settings/keys
+
+<span style="color:#75715e"># 在config文件中，指定github.com所对应的私钥</span>
+nano ~/.ssh/config
+---
+Host github.com
+        HostName github.com
+        IdentityFile ~/.ssh/<span style="color:#f92672">[</span>你的私钥<span style="color:#f92672">]</span>
+---        
+<span style="color:#75715e"># 删除之前的HTTPS远程仓库</span>
+git remote remove origin 
+<span style="color:#75715e"># 添加SSH远程仓库</span>
+git remote add origin git@github.com:<span style="color:#f92672">[</span>你的账号<span style="color:#f92672">]</span>/<span style="color:#f92672">[</span>你的repository<span style="color:#f92672">]</span>.git
+<span style="color:#75715e"># 推送远程仓库</span>
+git push -u origin main
+</code></pre></div><h2 id="二注册netlify并链接到github的repository">二、注册Netlify并链接到GitHub的Repository</h2>
+<p>基本就是点<a href="https://app.netlify.com/start">New site from Git</a>，然后选GItHub然后无脑点下一步就行了。</p>
+<p>配置域名。就搞好了。</p>
+<h2 id="三设置图片cdn">三、设置图片CDN</h2></div>
+				
+				<footer class="entry__footer">
+					
+<div class="entry__tags">
+			<a class="entry__tag btn" href="/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/">零成本快速建站</a>
+</div>
+					
+				</footer>
+				
+			</article>
+		</div>
+	</main>
+	
+	
+
+
+
+	
+
+	</div>
+	<footer class="footer">
+<div class="footer__links">
+	<a class="footer__link" href="/achieves/">归档</a> • <a class="footer__link" href="/tags/">标签</a> • <a class="footer__link" href="/categories/">分类</a>
+</div>
+	<div class="footer__copyright">© 2021 Guzhi.Pro. <span class="footer__copyright-credits">由 <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> 和 <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> 驱动.</span></div>
+</footer>
+<script src="/js/menu.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: "通过Netlify部署静态网站"
+title: "通过CDN部署静态网站"
 date: 2021-03-15T23:41:24+08:00
 tags:
   - "零成本快速建站"
@@ -19,7 +19,7 @@ categories:
 | 国内对象储存服务+CDN（阿里、腾讯）  | 较便宜 | 要备案         |
 | 国内静态网站服务商（Coding）        | 免费   | 有广告         |
 | 国外静态网站服务商（Github/Gitlab） | 免费   | 百度不收录     |
-| 国外静态网站CDN（Vercal）           | 免费   | 限每月100G流量 |
+| 国外静态网站CDN（Netlify/Vercel）   | 免费   | 限每月100G流量 |
 
 > 如果有已备案域名，可以考虑国内对象储存，不然还是Netlify吧！
 
@@ -70,6 +70,10 @@ git push -u origin main
 基本就是点[New site from Git](https://app.netlify.com/start)，然后选GItHub然后无脑点下一步就行了。
 
 配置域名。就搞好了。
+
+## 三、设置图片CDN
+
+
 
 
 

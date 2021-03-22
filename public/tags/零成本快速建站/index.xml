@@ -5,11 +5,75 @@
     <link>https://example.com/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/</link>
     <description>Recent content in 零成本快速建站 on 估值PRO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Mar 2021 23:41:24 +0800</lastBuildDate><atom:link href="https://example.com/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo网站美化进阶</title>
+      <link>https://example.com/post/hugo%E7%BD%91%E7%AB%99%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Wed, 17 Mar 2021 23:41:24 +0800</pubDate>
+      
+      <guid>https://example.com/post/hugo%E7%BD%91%E7%AB%99%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</guid>
+      <description>这是估值PRO的第3篇文章，也是零成本快速建站系列的第3篇文章。
+2021-03-17
+ 一、修改中文字体
+二、404页面</description>
+    </item>
+    
+    <item>
+      <title>通过CDN部署静态网站</title>
+      <link>https://example.com/post/cdn%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Mon, 15 Mar 2021 23:41:24 +0800</pubDate>
+      
+      <guid>https://example.com/post/cdn%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是&lt;a href=&#34;guzhi.pro&#34;&gt;估值PRO&lt;/a&gt;的第2篇文章，也是&lt;a href=&#34;https://example.com/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/&#34;&gt;零成本快速建站&lt;/a&gt;系列的第2篇文章。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2021-03-16&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用&lt;a href=&#34;../%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8HUGO/&#34;&gt;Hugo做完网站&lt;/a&gt;后，怎么发布到互联网上？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方案&lt;/th&gt;
+&lt;th&gt;成本&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;虚拟空间/VPS主机&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;要备案&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国内对象储存服务+CDN（阿里、腾讯）&lt;/td&gt;
+&lt;td&gt;较便宜&lt;/td&gt;
+&lt;td&gt;要备案&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国内静态网站服务商（Coding）&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td&gt;有广告&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国外静态网站服务商（Github/Gitlab）&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td&gt;百度不收录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国外静态网站CDN（Netlify/Vercel）&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td&gt;限每月100G流量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果有已备案域名，可以考虑国内对象储存，不然还是Netlify吧！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
     <item>
       <title>静态网站生成器Hugo</title>
       <link>https://example.com/post/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo/</link>
-      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Mar 2021 18:16:24 +0800</pubDate>
       
       <guid>https://example.com/post/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo/</guid>
       <description>&lt;blockquote&gt;

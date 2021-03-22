@@ -40,10 +40,10 @@
 
 # 404
 - id: page404_title
-  translation: "404 找不到该页面"
+  translation: "404"
 
 - id: page404_lead
-  translation: "对不起，你查看的页面不存在"
+  translation: "此页没有内容，催下作者更新吧"
 
 - id: page404_link
-  translation: "回到网站首页"
+  translation: "回到首页"

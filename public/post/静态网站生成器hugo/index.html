@@ -9,6 +9,7 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="stylesheet" href="/css/themes/dark-green.css">
 	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
 	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
 		
@@ -17,7 +18,7 @@
 	<header class="header">
 	<a class="logo" href="/">估值PRO</a>
 	
-<nav class="main-nav" role="navigation">
+<nav class="main-nav main-nav--right" role="navigation">
 	<button id="toggle" class="main-nav__btn" aria-label="Menu toggle" aria-expanded="false" tabindex="0">
 		<div class="main-nav__btn-box" tabindex="-1">
 			<svg class="main-nav__icon icon-menu" width="18" height="18" viewBox="0 0 18 18">
@@ -28,44 +29,9 @@
 	</button>
 	<ul id="menu" class="main-nav__list">
 			<li class="main-nav__item">
-				<a class="main-nav__link" href="/post/">
-					
-					<span class="main-nav__text">文章</span>
-					
-				</a>
-			</li>
-			<li class="main-nav__item">
-				<a class="main-nav__link" href="/tags/">
-					
-					<span class="main-nav__text">标签</span>
-					
-				</a>
-			</li>
-			<li class="main-nav__item">
-				<a class="main-nav__link" href="/categories/">
-					
-					<span class="main-nav__text">分类</span>
-					
-				</a>
-			</li>
-			<li class="main-nav__item">
-				<a class="main-nav__link" href="/post/goisforlovers/">
-					
-					<span class="main-nav__text">(Hu)go Template Primer</span>
-					
-				</a>
-			</li>
-			<li class="main-nav__item">
 				<a class="main-nav__link" href="/about/">
 					
-					<span class="main-nav__text">About Hugo</span>
-					
-				</a>
-			</li>
-			<li class="main-nav__item">
-				<a class="main-nav__link" href="/post/hugoisforlovers/">
-					
-					<span class="main-nav__text">Getting Started with Hugo</span>
+					<span class="main-nav__text">前言</span>
 					
 				</a>
 			</li>
@@ -76,24 +42,39 @@
 	
 	<main class="main">
 		
+<nav class="breadcrumb block" aria-label="breadcrumb">
+	<ol class="breadcrumb__list">
+		
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/">估值PRO</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/post/">文章列表</a>
+		</li>
+		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">静态网站生成器Hugo</li>
+	</ol>
+</nav>
 		<div class="single block">
 			<article class="entry">
 				<h1 class="entry__title">静态网站生成器Hugo</h1>
 <details class="entry__toc toc" >
-	<summary class="toc__title">内容目录</summary>
+	<summary class="toc__title">快速导航</summary>
 	<nav id="TableOfContents">
   <ul>
-    <li><a href="#1-安装">1 安装</a>
+    <li><a href="#一-安装">一 安装</a>
       <ul>
-        <li><a href="#11-安装hugo">1.1 安装Hugo</a></li>
-        <li><a href="#12-安装主题">1.2 安装主题</a></li>
-        <li><a href="#13-启动服务器">1.3 启动服务器</a></li>
-        <li><a href="#14-创建文章">1.4 创建文章</a></li>
+        <li><a href="#一安装hugo">（一）安装Hugo</a></li>
+        <li><a href="#二安装主题">（二）安装主题</a></li>
+        <li><a href="#三启动服务器">（三）启动服务器</a></li>
+        <li><a href="#四新建文章">（四）新建文章</a></li>
+        <li><a href="#五生成网站">（五）生成网站</a></li>
       </ul>
     </li>
-    <li><a href="#2-配置">2 配置</a>
+    <li><a href="#二配置">二、配置</a>
       <ul>
-        <li><a href="#21-主导航">2.1 主导航</a></li>
+        <li><a href="#一主导航">（一）主导航</a></li>
+        <li><a href="#二中文化">（二）中文化</a></li>
+        <li><a href="#三面包屑导航">（三）面包屑导航</a></li>
       </ul>
     </li>
   </ul>
@@ -107,58 +88,105 @@
 <p><strong>运维成本低</strong>：与WordPress、Drupal等传统博客程序相比，Hugo不需要管理数据库和后台程序，几乎不占用计算资源。</p>
 <p><strong>开发效率高</strong>：与hexo、jekyll等静态网站生成器相比，Hugo页面渲染速度更快，支持本地自动刷新，没有复杂的第三方依赖。</p>
 <p><strong>学习成本低</strong>：Hugo已经提供300+款主题模板，支持windows, macOS, linux跨平台，配置较为简单。</p>
-<h2 id="1-安装">1 安装</h2>
-<h3 id="11-安装hugo">1.1 安装Hugo</h3>
+<h2 id="一-安装">一 安装</h2>
+<h3 id="一安装hugo">（一）安装Hugo</h3>
 <p>Hugo安装方法详见<a href="https://gohugo.io/getting-started/installing/">官方文档·安装</a>，主要有直接下载可执行文件、Docker镜像、包管理器、编译安装等几种方式。</p>
 <p>推荐直接使用包管理器安装，如macOS下的homebrew，在终端下输入：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
 </code></pre></div><p>安装完成后，新建网站“MySite”</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site MySite
-</code></pre></div><h3 id="12-安装主题">1.2 安装主题</h3>
-<p>以主题<a href="https://github.com/vimux/binario/">Binario</a>为例，示范主题安装。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 进入MySite根目录</span>
-cd MySite
-<span style="color:#75715e"># 初始化GIT仓库</span>
-git init 
-<span style="color:#75715e"># 克隆主题到本地</span>
-git submodule add https://github.com/vimux/binario themes/binario
-</code></pre></div><p>在网站的配置文件 <code>config.toml</code> 中添加 <code>theme = &quot;binario&quot;</code>.</p>
-<p>或者直接复制主题样例文件到根目录。</p>
+</code></pre></div><h3 id="二安装主题">（二）安装主题</h3>
+<p>以<a href="https://github.com/vimux/binario/">Binario</a>主题为例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd MySite <span style="color:#75715e"># 进入MySite根目录</span>
+git init  <span style="color:#75715e"># 初始化GIT仓库</span>
+git submodule add https://github.com/vimux/binario themes/binario <span style="color:#75715e"># 下载主题到 themes/ 文件夹</span>
+</code></pre></div><p>下载主题后，在网站配置文件 <code>config.toml</code> 中添加 <code>theme = &quot;binario&quot;</code>.</p>
+<p>也可以直接复制主题样例文件到根目录，里面包含主题预设的<code>config.toml</code>和其他内容范例文件。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -r themes/binario/exampleSite/* . <span style="color:#75715e">#不要漏了最后那个点</span>
-</code></pre></div><h3 id="13-启动服务器">1.3 启动服务器</h3>
-<p>hugo自带一个web服务器, 运行<code>hugo server</code>后可以通过 <a href="http://localhost:1313/">http://localhost:1313</a> 来访问静态网站。</p>
-<p>下面是<code>hugo server</code>常用的参数, 注意大小写:</p>
+</code></pre></div><h3 id="三启动服务器">（三）启动服务器</h3>
+<p>在网站根目录运行<code>hugo server</code>，启动本地hugo网站服务器，就可以通过 <a href="http://localhost:1313/">http://localhost:1313</a> 来访问网站。</p>
+<p>下面是<code>hugo server</code>常用的参数, 注意大小写：</p>
 <ul>
 <li><code>-p 端口</code>: 修改默认端口</li>
-<li><code>-D</code>: 在使用server预览网站时, draft属性为ture的草稿文件是不会生成预览的，添加-D后可以预览草稿文件。</li>
+<li><code>-D</code>: 使用server预览网站时, draft属性为ture的草稿文件是不会生成预览的，添加-D后可以预览草稿文件。</li>
 </ul>
-<h3 id="14-创建文章">1.4 创建文章</h3>
-<h2 id="2-配置">2 配置</h2>
-<h3 id="21-主导航">2.1 主导航</h3>
+<h3 id="四新建文章">（四）新建文章</h3>
+<p>通过以下命令在<code>content</code>目录中新建文章页面，以 <em>测试页</em> 为例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new post/测试页.md
+</code></pre></div><p>该页面是根据<code>archetypes/default.md</code>模板文件生成的，默认状态为草稿，预览的话，需要<code>hugo server -D</code>，或者在 <em>测试页</em> 的Front Matter信息中将draft属性改成false</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;测试页&#34;</span>
+<span style="color:#f92672">date</span>: <span style="color:#e6db74">2021-03-15T18:16:24</span><span style="color:#ae81ff">+08</span>:<span style="color:#ae81ff">00</span>
+<span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+---
+</code></pre></div><h3 id="五生成网站">（五）生成网站</h3>
+<p>在网站根目录中输入<code>hugo</code>命令，不带任何参数，则默认<code>/public</code>目录下面生成静态网站文件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Start building sites … 
+
+                   | ZH  
+-------------------+-----
+  Pages            | <span style="color:#ae81ff">57</span>  
+  Paginator pages  |  <span style="color:#ae81ff">1</span>  
+  Non-page files   |  <span style="color:#ae81ff">2</span>  
+  Static files     | <span style="color:#ae81ff">13</span>  
+  Processed images |  <span style="color:#ae81ff">0</span>  
+  Aliases          | <span style="color:#ae81ff">23</span>  
+  Sitemaps         |  <span style="color:#ae81ff">1</span>  
+  Cleaned          |  <span style="color:#ae81ff">0</span>  
+
+Total in <span style="color:#ae81ff">95</span> ms
+</code></pre></div><h2 id="二配置">二、配置</h2>
+<h3 id="一主导航">（一）主导航</h3>
 <p>在配置文件 <code>config.toml</code> 中添加：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">menu</span>]
   [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
-  <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;文章&#34;</span>
-  <span style="color:#a6e22e">url</span>=<span style="color:#e6db74">&#34;/post/&#34;</span>
-  <span style="color:#a6e22e">weight</span>=<span style="color:#e6db74">&#34;1&#34;</span>
-  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
   <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;标签&#34;</span>
   <span style="color:#a6e22e">url</span>=<span style="color:#e6db74">&#34;/tags/&#34;</span>
-  <span style="color:#a6e22e">weight</span>=<span style="color:#e6db74">&#34;2&#34;</span>
+  <span style="color:#a6e22e">weight</span>=<span style="color:#e6db74">&#34;1&#34;</span>
   [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
   <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;分类&#34;</span>
   <span style="color:#a6e22e">url</span>=<span style="color:#e6db74">&#34;/categories/&#34;</span>
-  <span style="color:#a6e22e">weight</span>=<span style="color:#e6db74">&#34;3&#34;</span>
+  <span style="color:#a6e22e">weight</span>=<span style="color:#e6db74">&#34;2&#34;</span>
   [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">footer</span>]]
   <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;归档&#34;</span>
   <span style="color:#a6e22e">url</span>=<span style="color:#e6db74">&#34;/achieves/&#34;</span>
   <span style="color:#a6e22e">weight</span>=<span style="color:#e6db74">&#34;1&#34;</span>
-  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">footer</span>]]
-  <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;关于&#34;</span>
-  <span style="color:#a6e22e">url</span>=<span style="color:#e6db74">&#34;/about/&#34;</span>
-  <span style="color:#a6e22e">weight</span>=<span style="color:#e6db74">&#34;2&#34;</span>
-</code></pre></div><p>或者直接在页面的Front_Matter中</p>
-<p>部署到GITHUB</p></div>
+</code></pre></div><p>以上代码表示在主导航（menu.main），添加 <em>标签</em> 和 分类 两个链接，在底部导航（menu.footer），添加 <em>归档</em> 链接</p>
+<p>也可以直接在页面的Front_Matter信息中，添加一行<code>menu: main</code>或<code>menu.footer</code>，指定该页面加进导航中</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#f92672">title</span>: <span style="color:#ae81ff">About Hugo</span>
+<span style="color:#f92672">description</span>: <span style="color:#ae81ff">Hugo, the world’s fastest framework for building websites</span>
+<span style="color:#f92672">date</span>: <span style="color:#e6db74">2019-02-28</span>
+<span style="color:#f92672">author</span>: <span style="color:#ae81ff">Hugo Authors</span>
+<span style="color:#f92672">menu</span>: <span style="color:#ae81ff">footer</span>
+---
+</code></pre></div><h3 id="二中文化">（二）中文化</h3>
+<p>Hugo支持多语言设置，详见<a href="https://gohugo.io/content-management/multilingual/">官方文档·多语言</a>，这里只介绍如何将英文的<a href="https://github.com/vimux/binario/">Binario</a>主题修改为中文。</p>
+<h4 id="修改多语言文件">修改多语言文件</h4>
+<p>在配置文件 <code>config.toml</code> 中添加：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#34;zh&#34;</span>
+<span style="color:#a6e22e">defaultContentLanguageInSubdir</span> = <span style="color:#66d9ef">true</span>
+</code></pre></div><p>然后在<code>themes/binario/i18n</code>文件夹下，将<code>en.yaml</code>复制一份，重命名为<code>zh.yaml</code>，修改<code>zh.yaml</code>对应的<code>translation</code>项即可。</p>
+<h4 id="修改默认列表页模板">修改默认列表页模板</h4>
+<p>由于Hugo默认生成的两种文章分类法（Taxonomy）——分类（Categories）和标签（Tags）的页面是自动生成的，因此这两个分类法的列表页没有办法通过翻译，我们可以通过建立这两种分类法的模板文件，来解决这个问题。</p>
+<p>分别在<code>content/</code>文件夹下，建立<code>categories/</code>文件夹和<code>tags/</code>文件夹，两个文件夹下分别建立<code>_index.md</code>文件，内容如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;分类&#34;</span>
+---
+</code></pre></div><p><code>post/</code>文件夹也可以用同样的操作设置列表页的自定义标题</p>
+<h3 id="三面包屑导航">（三）面包屑导航</h3>
+<p>修改<code>config.toml</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">Breadcrumb</span>]
+  <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span> <span style="color:#75715e"># 开启全站面包屑导航</span>
+  <span style="color:#a6e22e">homeText</span> = <span style="color:#e6db74">&#34;估值PRO&#34;</span> <span style="color:#75715e"># 设置首页导航名称</span>
+</code></pre></div><p>不需要的页面，可以在页面的Front_Matter信息中关掉。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#f92672">breadcrumb</span>: <span style="color:#66d9ef">false</span>
+---
+</code></pre></div><p>至此，一个静态网站就在本地搭建好了。</p>
+<p>发布到互联网方面，请查看 <a href="../%E9%80%9A%E8%BF%87netlify%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/">通过Netlify部署静态网站</a></p>
+<p>美观方面，请继续看 <a href="../hugo%E7%BD%91%E7%AB%99%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/">Hugo网站美化进阶</a></p>
+<p>FIN.</p></div>
 				
 				<footer class="entry__footer">
 					
@@ -181,7 +209,7 @@ git submodule add https://github.com/vimux/binario themes/binario
 	</div>
 	<footer class="footer">
 <div class="footer__links">
-	<a class="footer__link" href="/achieves/">归档</a> • <a class="footer__link" href="/about/">关于</a>
+	<a class="footer__link" href="/achieves/">归档</a> • <a class="footer__link" href="/tags/">标签</a> • <a class="footer__link" href="/categories/">分类</a>
 </div>
 	<div class="footer__copyright">© 2021 Guzhi.Pro. <span class="footer__copyright-credits">由 <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> 和 <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> 驱动.</span></div>
 </footer>
