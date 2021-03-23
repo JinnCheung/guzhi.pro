@@ -71,6 +71,69 @@ git push -u origin main
 
 配置域名。就搞好了。
 
+由于 GitHub Pages 在国内的访问速度实在不理想，使用 cloudflare CDN 也没什么太好的效果，因此一直在寻找合适的替代品。最近了解到 [Vercel](https://vercel.com/) 同样提供了简单的一键式托管服务，同时在国内访问速度十分优良，因此迁移到了该服务。下面简单记录一下折腾的过程。
+
+
+
+# 一键托管
+
+## 导入站点
+
+Vercel 的使用十分简单，只需要使用 GitHub 登录，然后填写源码所在的 repository 地址即可，会自动识别使用的框架，并自动生成静态文件后部署。Vercel 会自动分配给你一个网址，用来预览效果。
+
+## 自定义域名
+
+在项目主页点击 **Settings -> Domains** 可以添加自己的域名，由于想要使用 Vercel 自带的 CDN 服务，把域名的 DNS 记录指向 Vercel 即可，同时设置仅 DNS。
+
+# 自定义部署
+
+使用 Vercel 的全自动部署固然方便，然而会遇到一些小问题，比如[这里](https://editio.me/2019/hexo-CI-github-actions/)提到的网页时间问题，需要先处理一下文件的时间。此外还可以自定义404页面来替换丑丑的 Vercel 默认404页面。
+
+## 自定义部署命令
+
+Vercel 默认读取的是根目录中 `package.json` 的部署命令，因此想要修改部署时执行命令的话可以先在根目录添加一个 `vercel.sh` 文件，写好自定义命令。
+
+```
+#!/bin/bash
+
+export TZ='Asia/Shanghai'
+git ls-files -z | while read -d '' path; do 
+    touch -d "$(git log -1 --format="@%ct" "$path")" "$path";
+done
+hexo generate
+```
+
+之后修改 `package.json` 中的 `scripts` 部分。
+
+```
+"scripts": {
+  "build": "bash ./vercel.sh",
+  "clean": "hexo clean",
+  "deploy": "hexo deploy",
+  "server": "hexo server"
+},
+```
+
+这样 Vercel 在部署时就会执行 `vercel.sh` 的命令了。
+
+## 自定义404页面
+
+参考 Vercel 的[官方文档](https://vercel.com/docs/configuration#project/routes)，我们可以使用 routers 功能把404状态的请求指向我们自己的404页面。
+
+在根目录下添加 `vercel.json` 文件，填入以下内容即可。
+
+```
+{
+    "version": 2,
+	"routes": [
+	  { "handle": "filesystem" },
+	  { "src": "/(.*)", "status": 404, "dest": "/404.html" } 
+	]
+}
+```
+
+此外vercel还支持 Serverless 功能，包括 Node.js, Go, Python, Ruby 语言，可以轻松开发自己想要的玩法。
+
 ## 三、设置图片CDN
 
 

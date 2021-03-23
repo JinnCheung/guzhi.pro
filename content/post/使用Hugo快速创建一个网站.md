@@ -1,5 +1,5 @@
 ---
-title: "静态网站生成器Hugo"
+title: "使用Hugo快速创建一个网站"
 date: 2021-03-15T18:16:24+08:00
 tags:
   - "零成本快速建站"
@@ -9,7 +9,9 @@ categories:
 
 > 这是[估值PRO](guzhi.pro)的第1篇文章，也是[零成本快速建站](/tags/零成本快速建站/)系列的第1篇文章。
 >
-> *2021-03-15*
+> *2021-03-2*3
+
+本站采用Hugo构建，托管在Github，通过Vercel部署，图片和字体托管在
 
 [Hugo](https://gohugo.io/)是一款跨平台静态网站生成器，采用[golang](https://golang.org/)编写，优点主要有：
 
