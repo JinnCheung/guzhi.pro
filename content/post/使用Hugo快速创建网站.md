@@ -1,5 +1,5 @@
 ---
-title: "使用Hugo快速创建一个网站"
+title: "使用Hugo快速创建网站"
 date: 2021-03-15T18:16:24+08:00
 tags:
   - "零成本快速建站"
@@ -11,8 +11,6 @@ categories:
 >
 > *2021-03-2*3
 
-本站采用Hugo构建，托管在Github，通过Vercel部署，图片和字体托管在
-
 [Hugo](https://gohugo.io/)是一款跨平台静态网站生成器，采用[golang](https://golang.org/)编写，优点主要有：
 
 **运维成本低**：与WordPress、Drupal等传统博客程序相比，Hugo不需要管理数据库和后台程序，几乎不占用计算资源。
@@ -22,6 +20,10 @@ categories:
 **学习成本低**：Hugo已经提供300+款主题模板，支持windows, macOS, linux跨平台，配置较为简单。
 
 <!--more-->
+
+本站采用Hugo构建，托管在Github，通过Vercel部署，图片托管在腾讯云。
+
+本文首先介绍使用Hugo在本地建站。
 
 
 ## 一 安装
