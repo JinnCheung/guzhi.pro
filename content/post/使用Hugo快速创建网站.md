@@ -9,7 +9,7 @@ categories:
 
 > 这是[估值PRO](guzhi.pro)的第1篇文章，也是[零成本快速建站](/tags/零成本快速建站/)系列的第1篇文章。
 >
-> *2021-03-2*3
+> 更新：2021-03-23
 
 [Hugo](https://gohugo.io/)是一款跨平台静态网站生成器，采用[golang](https://golang.org/)编写，优点主要有：
 
@@ -150,7 +150,7 @@ menu: footer
 
 Hugo支持多语言设置，详见[官方文档·多语言](https://gohugo.io/content-management/multilingual/)，这里只介绍如何将英文的[Binario](https://github.com/vimux/binario/)主题修改为中文。
 
-#### 修改多语言文件
+#### 1. 修改多语言文件
 
 在配置文件 `config.toml` 中添加：
 
@@ -161,7 +161,7 @@ defaultContentLanguageInSubdir = true
 
 然后在`themes/binario/i18n`文件夹下，将`en.yaml`复制一份，重命名为`zh.yaml`，修改`zh.yaml`对应的`translation`项即可。
 
-#### 修改默认列表页模板
+#### 2. 修改默认列表页模板
 
 由于Hugo默认生成的两种文章分类法（Taxonomy）——分类（Categories）和标签（Tags）的页面是自动生成的，因此这两个分类法的列表页没有办法通过翻译，我们可以通过建立这两种分类法的模板文件，来解决这个问题。
 

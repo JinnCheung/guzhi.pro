@@ -24,6 +24,4 @@ breadcrumb: false
 
 感谢[Hugo](https://gohugo.io/)引擎和[Binario](https://github.com/vimux/binario)主题的开发者，还有所有开源技术贡献者。
 
-互联网的美好，是因为有你们追求自由。
-
 
