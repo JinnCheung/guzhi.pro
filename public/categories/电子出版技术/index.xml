@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>电子出版技术 on 估值PRO</title>
+    <link>https://example.com/categories/%E7%94%B5%E5%AD%90%E5%87%BA%E7%89%88%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 电子出版技术 on 估值PRO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Mar 2021 23:41:24 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E7%94%B5%E5%AD%90%E5%87%BA%E7%89%88%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo网站美化进阶</title>
+      <link>https://example.com/post/hugo%E7%BD%91%E7%AB%99%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Wed, 17 Mar 2021 23:41:24 +0800</pubDate>
+      
+      <guid>https://example.com/post/hugo%E7%BD%91%E7%AB%99%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</guid>
+      <description>这是估值PRO的第3篇文章，也是零成本快速建站系列的第3篇文章。
+2021-03-17
+ 一、修改中文字体
+二、404页面</description>
+    </item>
+    
+    <item>
+      <title>使用Vercel部署网站</title>
+      <link>https://example.com/post/%E4%BD%BF%E7%94%A8vercel%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Mon, 15 Mar 2021 23:41:24 +0800</pubDate>
+      
+      <guid>https://example.com/post/%E4%BD%BF%E7%94%A8vercel%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是&lt;a href=&#34;guzhi.pro&#34;&gt;估值PRO&lt;/a&gt;的第2篇文章，也是&lt;a href=&#34;https://example.com/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/&#34;&gt;零成本快速建站&lt;/a&gt;系列的第2篇文章。&lt;/p&gt;
+&lt;p&gt;更新：2021-03-23&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用&lt;a href=&#34;../%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8HUGO/&#34;&gt;Hugo做完网站&lt;/a&gt;后，怎么发布到互联网上？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方案&lt;/th&gt;
+&lt;th&gt;成本&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;虚拟空间/VPS主机&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;要备案&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国内对象储存服务+CDN（阿里、腾讯）&lt;/td&gt;
+&lt;td&gt;较便宜&lt;/td&gt;
+&lt;td&gt;要备案&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国内静态网站服务商（Coding）&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td&gt;有广告&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国外静态网站服务商（Github/Gitlab）&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td&gt;百度不收录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国外CDN（Netlify/Vercel）&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td&gt;限每月100G流量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果有已备案域名，可以考虑国内对象储存，不然还是Vercel吧！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Hugo快速创建网站</title>
+      <link>https://example.com/post/%E4%BD%BF%E7%94%A8hugo%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Mon, 15 Mar 2021 18:16:24 +0800</pubDate>
+      
+      <guid>https://example.com/post/%E4%BD%BF%E7%94%A8hugo%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是&lt;a href=&#34;guzhi.pro&#34;&gt;估值PRO&lt;/a&gt;的第1篇文章，也是&lt;a href=&#34;https://example.com/tags/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%99/&#34;&gt;零成本快速建站&lt;/a&gt;系列的第1篇文章。&lt;/p&gt;
+&lt;p&gt;更新：2021-03-23&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;是一款跨平台静态网站生成器，采用&lt;a href=&#34;https://golang.org/&#34;&gt;golang&lt;/a&gt;编写，优点主要有：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;运维成本低&lt;/strong&gt;：与WordPress、Drupal等传统博客程序相比，Hugo不需要管理数据库和后台程序，几乎不占用计算资源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;开发效率高&lt;/strong&gt;：与hexo、jekyll等静态网站生成器相比，Hugo页面渲染速度更快，支持本地自动刷新，没有复杂的第三方依赖。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;学习成本低&lt;/strong&gt;：Hugo已经提供300+款主题模板，支持windows, macOS, linux跨平台，配置较为简单。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
