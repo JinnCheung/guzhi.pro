@@ -31,17 +31,17 @@ categories:
 
 在国内提供服务最好还是备案，但备案必须有国内主机，国内主机再便宜也要400一年，加上域名费用，没有盈利能力的网站，还是能省则省，等~~上了正轨~~主机大促再投入不迟。
 
-静态网站一般选择是托管到Github，但Github Pages国内速度慢且百度不收录，所以需要通过免费CDN服务绕一下。
+静态网站一般选择是托管到Github，但Github国内速度慢且百度不收录，所以要通过CDN绕一下。
 
-以前大家一般用Netlify，但后来发现Vercel对中国境内的速度优化更好，免费账户限100G流量，基本够用。
+以前大家部署静态网站，一般用[Netlify](https://www.netlify.com/)。[Netlify](https://www.netlify.com/)主要提供持续集成（就是提交代码到Github后，自动从Github拉取代码、生成页面、编译程序）和CDN加速服务。
 
-另外我原来就有一个备案过的腾讯云COS，因此网站内的图片我通过
+但同类网站[Vercel](https://vercel.com/)对中国境内的速度优化更好，免费账户限100G流量，所以逐渐都转向Vercel。
 
 ## 一、把网站提交到Github
 
 注册Github账户和在GitHub创建仓库（Repository）不再赘述。
 
-在终端中，在网站文件夹下按以下命令操作:
+创建完Github仓库后，在本地终端中按以下命令操作:
 
 ```bash
 # 如果未初始化过，初始化GIT仓库 && 添加所有文件监视 && 提交第一次修改
@@ -50,7 +50,7 @@ git init && git add . && git commit -m "1st"
 git branch -M main
 # 新增远程分支
 git remote add origin https://github.com/[你的账号]/[你的repository].git
-# 如果远程仓库原来不为空仓库，拉取origin远程分支至本地main，合并不相关的历史分支。如果为空，忽略
+# 如果远程仓库原来不为空仓库，拉取origin远程分支至本地main，合并不相关的历史分支。如果为空，不需要以下命令
 git pull origin main --allow-unrelated-histories && git commit -m "merge remote"  
 # 推送main分支到远程分支origin
 git push -u origin main
@@ -59,10 +59,10 @@ git push -u origin main
 不喜欢提交时输入账号密码的，可以改SSH方式提交（需要创建密钥和设置SSH，密钥和SSH详见[Linux服务器管理基础](../Linux服务器管理基础/)）
 
 ```bash
-# 在本机生成密钥对，然后在GitHub中添加公钥
+# 在本机生成密钥对，然后在GitHub中添加公钥，网址：
 https://github.com/settings/keys
 
-# 在config文件中，指定github.com所对应的私钥
+# 在config文件中，指定公钥所对应的私钥
 nano ~/.ssh/config
 ---
 Host github.com
@@ -77,76 +77,19 @@ git remote add origin git@github.com:[你的账号]/[你的repository].git
 git push -u origin main
 ```
 
-## 二、注册Netlify并链接到GitHub的Repository
+## 二、从Vercel拉取网站并绑定域名
 
-基本就是点[New site from Git](https://app.netlify.com/start)，然后选GItHub然后无脑点下一步就行了。
-
-配置域名。就搞好了。
-
-由于 GitHub Pages 在国内的访问速度实在不理想，使用 cloudflare CDN 也没什么太好的效果，因此一直在寻找合适的替代品。最近了解到 [Vercel](https://vercel.com/) 同样提供了简单的一键式托管服务，同时在国内访问速度十分优良，因此迁移到了该服务。下面简单记录一下折腾的过程。
-
-
-
-# 一键托管
-
-## 导入站点
+### （一）导入站点
 
 Vercel 的使用十分简单，只需要使用 GitHub 登录，然后填写源码所在的 repository 地址即可，会自动识别使用的框架，并自动生成静态文件后部署。Vercel 会自动分配给你一个网址，用来预览效果。
 
-## 自定义域名
+### （二）自定义域名
 
 在项目主页点击 **Settings -> Domains** 可以添加自己的域名，由于想要使用 Vercel 自带的 CDN 服务，把域名的 DNS 记录指向 Vercel 即可，同时设置仅 DNS。
 
-# 自定义部署
+## 三、备份网站至对象储存
 
-使用 Vercel 的全自动部署固然方便，然而会遇到一些小问题，比如[这里](https://editio.me/2019/hexo-CI-github-actions/)提到的网页时间问题，需要先处理一下文件的时间。此外还可以自定义404页面来替换丑丑的 Vercel 默认404页面。
-
-## 自定义部署命令
-
-Vercel 默认读取的是根目录中 `package.json` 的部署命令，因此想要修改部署时执行命令的话可以先在根目录添加一个 `vercel.sh` 文件，写好自定义命令。
-
-```
-#!/bin/bash
-
-export TZ='Asia/Shanghai'
-git ls-files -z | while read -d '' path; do 
-    touch -d "$(git log -1 --format="@%ct" "$path")" "$path";
-done
-hexo generate
-```
-
-之后修改 `package.json` 中的 `scripts` 部分。
-
-```
-"scripts": {
-  "build": "bash ./vercel.sh",
-  "clean": "hexo clean",
-  "deploy": "hexo deploy",
-  "server": "hexo server"
-},
-```
-
-这样 Vercel 在部署时就会执行 `vercel.sh` 的命令了。
-
-## 自定义404页面
-
-参考 Vercel 的[官方文档](https://vercel.com/docs/configuration#project/routes)，我们可以使用 routers 功能把404状态的请求指向我们自己的404页面。
-
-在根目录下添加 `vercel.json` 文件，填入以下内容即可。
-
-```
-{
-    "version": 2,
-	"routes": [
-	  { "handle": "filesystem" },
-	  { "src": "/(.*)", "status": 404, "dest": "/404.html" } 
-	]
-}
-```
-
-此外vercel还支持 Serverless 功能，包括 Node.js, Go, Python, Ruby 语言，可以轻松开发自己想要的玩法。
-
-## 三、设置图片CDN
+无论Github还是Vercel，其实都支持自动化操作，
 
 
 
