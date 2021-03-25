@@ -31,11 +31,11 @@ categories:
 
 在国内提供服务最好还是备案，但备案必须有国内主机，国内主机再便宜也要400一年，加上域名费用，没有盈利能力的网站，还是能省则省，等~~上了正轨~~主机大促再投入不迟。
 
-静态网站一般选择是托管到Github，但Github国内速度慢且百度不收录，所以要通过CDN绕一下。
+静态网站一般选择是托管到Github，但Github国内速度慢且百度不收录，所以托管到Github以后还要通过CDN绕一下。
 
-以前大家部署静态网站，一般用[Netlify](https://www.netlify.com/)。[Netlify](https://www.netlify.com/)主要提供持续集成（就是提交代码到Github后，自动从Github拉取代码、生成页面、编译程序）和CDN加速服务。
+以前大家部署静态网站，一般用[Netlify](https://www.netlify.com/)。[Netlify](https://www.netlify.com/)主要提供持续集成（提交代码到Github后，自动从Github拉取代码、生成页面、编译程序）和CDN加速服务。
 
-但同类网站[Vercel](https://vercel.com/)对中国境内的速度优化更好，免费账户限100G流量，所以逐渐都转向Vercel。
+但同类网站[Vercel](https://vercel.com/)对中国境内的访问速度优化更好，免费账户限100G流量，所以逐渐都转向Vercel。
 
 ## 一、把网站提交到Github
 
@@ -87,9 +87,15 @@ Vercel 的使用十分简单，只需要使用 GitHub 登录，然后填写源�
 
 在项目主页点击 **Settings -> Domains** 可以添加自己的域名，由于想要使用 Vercel 自带的 CDN 服务，把域名的 DNS 记录指向 Vercel 即可，同时设置仅 DNS。
 
-## 三、备份网站至对象储存
+---
 
-无论Github还是Vercel，其实都支持自动化操作，
+至此，一个静态网站就成功部署到互联网了。
+
+可以通过测速网站测试一下网站速度（[17ce.com](17ce.com)/ [boce.com](boce.com)/[ce8.com](ce8.com)）。
+
+美观方面，请继续看 [Hugo网站美化进阶](../hugo网站美化进阶/)。
+
+FIN.
 
 
 
